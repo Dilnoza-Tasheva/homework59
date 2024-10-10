@@ -18,14 +18,22 @@ const Movies: React.FC = () => {
     }
   };
 
+  const deleteMovie = (id: string) => {
+    setMovies(movies.filter((movie) => movie.id !== id));
+  };
+
   return (
     <div>
       <h5>Movies list for a movie night:</h5>
       <AddMovieForm currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} addNewMovie={addNewMovie}/>
       <div className="movie-list">
-        <Movie/>
-        <Movie/>
-        <Movie/>
+        {movies.map((movie) => (
+          <Movie
+            deleteMovie={deleteMovie}
+            key={movie.id}
+            title={movie.title}
+          />
+        ))}
       </div>
     </div>
   );
