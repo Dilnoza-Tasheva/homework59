@@ -7,16 +7,25 @@ interface Props {
 }
 
 const AddMovieForm: React.FC<Props> = ({currentMovie, setCurrentMovie, addNewMovie}) => {
+
+  const onSubmit =(e: React.FormEvent) => {
+    e.preventDefault();
+    addNewMovie();
+  };
+
   return (
-    <div className="add-movie-form">
+    <form
+      className="add-movie-form"
+      onSubmit={onSubmit}
+    >
       <input
         type="text"
         placeholder="Movie title"
         value={currentMovie}
         onChange={(e) => setCurrentMovie(e.target.value)}
       />
-      <button type="button" onClick={addNewMovie}>Add</button>
-    </div>
+      <button type="submit" className="btn btn-primary">Add</button>
+    </form>
   );
 };
 
