@@ -24,7 +24,7 @@ const Jokes = () => {
   }, [])
 
   return (
-    <div>
+    <div className="d-flex justify-content-evenly align-items-center">
       <Joke joke={joke}/>
       <GetNewJokeBtn addNewJoke={fetchData}/>
     </div>

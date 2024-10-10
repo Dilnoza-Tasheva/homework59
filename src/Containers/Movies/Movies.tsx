@@ -23,7 +23,7 @@ const Movies: React.FC = () => {
   };
 
   return (
-    <div className="movies-container m-4">
+    <div className="m-4">
       <h5 className="fs-5">Movies list for a movie night:</h5>
       <AddMovieForm currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} addNewMovie={addNewMovie}/>
       <hr/>

@@ -6,7 +6,7 @@ interface Props {
 const GetNewJokeBtn: React.FC<Props> = ({addNewJoke}) => {
   return (
     <div>
-      <button className="btn btn-primary" onClick={addNewJoke}>click to get the new joke</button>
+      <button className="btn btn-primary" onClick={addNewJoke}>New joke</button>
     </div>
   );
 };
