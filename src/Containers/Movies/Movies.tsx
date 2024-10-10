@@ -32,6 +32,7 @@ const Movies: React.FC = () => {
             deleteMovie={deleteMovie}
             key={movie.id}
             title={movie.title}
+            id={movie.id}
           />
         ))}
       </div>
