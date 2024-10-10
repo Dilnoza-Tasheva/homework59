@@ -7,7 +7,7 @@ interface Props {
   deleteMovie: (id: string) => void;
 }
 
-const Movie: React.FC<Props> = ({title, id, deleteMovie}) => {
+const Movie: React.FC<Props> =React.memo (({title, id, deleteMovie}) => {
   const [currentTitle, setCurrentTitle] = useState<string>(title)
   return (
     <div className="movie">
@@ -20,6 +20,8 @@ const Movie: React.FC<Props> = ({title, id, deleteMovie}) => {
       <button className="btn btn-danger" onClick={() => deleteMovie(id)}>Delete</button>
     </div>
   );
-};
+}, (prevProps, nextProps) => {
+  return prevProps.title === nextProps.title;
+});
 
 export default Movie;
