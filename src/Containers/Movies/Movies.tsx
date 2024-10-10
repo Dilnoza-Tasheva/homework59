@@ -23,10 +23,11 @@ const Movies: React.FC = () => {
   };
 
   return (
-    <div>
-      <h5>Movies list for a movie night:</h5>
+    <div className="movies-container m-4">
+      <h5 className="fs-5">Movies list for a movie night:</h5>
       <AddMovieForm currentMovie={currentMovie} setCurrentMovie={setCurrentMovie} addNewMovie={addNewMovie}/>
-      <div className="movie-list">
+      <hr/>
+      <div className="movie-list d-flex flex-column gap-2 m-2">
         {movies.map((movie) => (
           <Movie
             deleteMovie={deleteMovie}

@@ -23,6 +23,7 @@ const AddMovieForm: React.FC<Props> = ({currentMovie, setCurrentMovie, addNewMov
         placeholder="Movie title"
         value={currentMovie}
         onChange={(e) => setCurrentMovie(e.target.value)}
+        className="m-2"
       />
       <button type="submit" className="btn btn-primary">Add</button>
     </form>

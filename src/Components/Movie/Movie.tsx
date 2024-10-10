@@ -17,7 +17,7 @@ const Movie: React.FC<Props> =React.memo (({title, id, deleteMovie}) => {
        value={currentTitle}
        onChange={(e) => setCurrentTitle(e.target.value)}
      />
-      <button className="btn btn-danger" onClick={() => deleteMovie(id)}>Delete</button>
+      <button className="btn btn-danger mx-2" onClick={() => deleteMovie(id)}>Delete</button>
     </div>
   );
 }, (prevProps, nextProps) => {
